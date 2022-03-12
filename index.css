@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+/*Navbar design*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    box-shadow: 1px 2px 5px #004991;
+}
+
+.logo img{
+    max-width: 250px;
+}
+
+#book-btn{
+    font-weight: bold;
+    padding: 16px 32px;
+    background-color: #004991;
+    color: #fff;
+    border: .1px solid #f0f0f0;
+    margin-right: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#book-btn:hover{
+    background-color: #fff;
+    color:#b68400;
+    border: .1px solid #004991;
+}
+
+.user-login{
+    color:#b68400;
+    font-weight: bold;
+}
+
+.user-login:hover{
+    color:#004991;
+}
+
+.user-login i{
+    margin-right: 5px;
+}
+
+/*Main section*/
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*Side bar */
+
+.sidebar{
+    width: 300px;
+    padding: 50px 20px;
+    border-right: .1px solid #c0c0c0;
+    height: 100%;
+}
+
+.sidebar ul{
+    padding: 0;
+}
+
+.sidebar li a{
+    padding: 16px 32px;
+    display: flex;
+    font-weight: bold;
+    color: #000;
+    align-items: center;
+}
+
+.sidebar li a:hover{
+    background-color: #f0f0f0;
+    color: #004991;
+}
+
+.sidebar-item i{
+    margin-right: 5px;
+}
+
+/*Main content*/
+
+.main-content{
+    width: 100%;
+}
+
+.title{
+    padding: 2rem 5rem;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: #f4f4f4;
+}
+
+.table td,
+.table th {
+    text-align: left;
+    border-bottom: 0.1rem solid #e4e4e4;
+    padding: 0.5rem;
+}
+
+.status{
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: default;
+}
+
+.status[data-tag="Pending Review"]{
+background-color: #EBFD7D;
+color: #363D0B;
+}
+
+.status[data-tag="Approved"]{
+    background-color: #98DA8E;
+    color: #15420E;
+}
+
+.status[data-tag="Declined"]{
+    background-color: #EF928C;
+    color: #680B0B;
+}
+
+.fa-window-close{
+    color: #eb3b5a;
+}
+
+/*Popup*/
+
+#boxPopup {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}             
+.open-button {
+    background-color: #1c87c9;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+}
+/* Hide Popup*/
+.form-popup {           
+    z-index: 9;
+    max-width: 60%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.form-popup h2{
+    text-align: center;
+}
+
+.form-popup ul{
+    padding-top:  30px;
+}
+
+.form-control{
+    position:relative;
+    font-family: inherit;
+    margin-bottom:10px;
+    padding-bottom:20px;
+}
+
+.form-control label{
+display:block;
+margin-bottom:5px;
+}

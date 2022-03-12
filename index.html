@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullerton Health</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/3f40b51c52.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="./images/logo-fullerton-health-small.png" alt="fullerton-health"></div>
+        <div class="right-nav">
+            <button id="book-btn" onclick="openPopup()">Book now</button>
+            
+            <a class="user-login" href="#"><i class="fas fa-user"></i>Login</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div id="boxPopup">
+            <form class="form-popup">
+                <h2>Booking Form</h2>
+                <ul>
+                    <li class="form-control">
+                        <label>Type of event</label>
+                        <select name="event-type" id="event-type" >
+                            <option value="Health Talk">Health Talk</option>
+                            <option value="Wellness Events">Wellness Events</option>
+                            <option value="Fitness Activities">Fitness Activities</option>
+                        </select>
+                    </li>
+                    <li class="form-control">
+                        <label>Location of Event</label>
+                        <textarea></textarea>
+                    </li>
+                    <li class="form-control">
+                        <label>Please choose date and time</label>
+                        <select name="event-type" id="event-type" >
+                            <option value="08:00 AM - 10:00 AM">08:00 AM - 10:00 AM</option>
+                            <option value="08:30 AM - 10:30 AM">08:30 AM - 10:30 AM</option>     
+                        </select>
+                        <select name="event-type" id="event-type" >
+                            <option value="10:30 AM - 11:30 AM">10:30 AM - 11:30 AM</option>
+                            <option value="01:30 PM - 03:30 PM">01:30 PM - 03:30 PM</option>
+                        </select>
+                        <select name="event-type" id="event-type" >
+                            <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM</option>
+                            <option value="02:30 PM - 04:30 PM">02:30 PM - 04:30 PM</option>
+                        </select>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li class="sidebar-item"><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                <li class="sidebar-item"><a href="#"><i class="fas fa-user"></i> User Information</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="title">
+                <h2>Dashboard</h2>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Dates</th>
+                        <th>Customers</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>13:45 - Mar 25 </td>
+                        <td>Jack</td>
+                        <td ><span class="status" data-tag="Pending Review">Pending Review</span></td>
+                        <td><i class="fas fa-window-close"></i> Cancel</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>09:15 - Mar 28 </td>
+                        <td>Marie</td>
+                        <td><span class="status" data-tag="Approved">Approved</span></td>
+                        <td><i class="fas fa-window-close"></i> Cancel</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>14:30 - Mar 30 </td>
+                        <td>John</td>
+                        <td><span class="status" data-tag="Declined">Declined</span></td>
+                        <td><i class="fas fa-window-close"></i> Cancel</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </main>
+    <script>
+        function openPopup() {
+            document.getElementById("boxPopup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("boxPopup").style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            var modal = document.getElementById('boxPopup');
+            if (event.target == modal) {
+                closePopup();
+            }
+        }
+    </script>
+</body>
+</html>
