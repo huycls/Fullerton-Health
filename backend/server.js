@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// mongoose.connect('mongodb+srv://huyhoangcls:huynguyen289970@cluster0.hn9iu.mongodb.net/test', {
+// mongoose.connect(URI, {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 //   useCreateIndex: true,

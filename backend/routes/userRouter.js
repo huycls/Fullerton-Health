@@ -111,18 +111,18 @@ userRouter.post(
 //   }     
 // });
 
-userRouter.post("/createuser", async(req,res)=>{
-  try{
-    const user = new User({
-      username: 'user2',
-      password: bcrypt.hashSync('234567', 8),
-      isAdmin: false
-    });
-  const newUser = await user.save();
-  res.send(newUser);
-  } catch (error){
-    res.send({message: 'Invalid email or password'});
-  }     
-});
+// userRouter.post("/createuser", async(req,res)=>{
+//   try{
+//     const user = new User({
+//       username: 'user2',
+//       password: bcrypt.hashSync('234567', 8),
+//       isAdmin: false
+//     });
+//   const newUser = await user.save();
+//   res.send(newUser);
+//   } catch (error){
+//     res.send({message: 'Invalid email or password'});
+//   }     
+// });
 
 export default userRouter;

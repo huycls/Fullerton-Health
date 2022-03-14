@@ -56,9 +56,9 @@ bookingRouter.post(
         service: 'Health Talk',
         // customer: req.user.username,
         createdBy: req.user._id,
-        location: '...',
+        location: 'Singapore',
         status: 'Pending Review',
-        date: ['08:00 AM Mar 16','08:00 AM Mar 16','08:00 AM Mar 16']
+        date: ['']
       });
       const createdBooking = await book.save();
       res.send({ message: 'Booking Created', book: createdBooking });
@@ -72,7 +72,6 @@ bookingRouter.put(
       const bookId = req.params.id;
       const book = await Booking.findById(bookId);
       if (book) {
-        book.username = req.body.username;
         book.createdBy = req.body.createdBy;
         book.service = req.body.service;
         book.location = req.body.location;
